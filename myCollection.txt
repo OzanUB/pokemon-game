@@ -2,3 +2,4 @@
 13 Weedle 321 32 1
 132 Ditto 1041 104 2
 106 Hitmonlee 1227 122 3
+25 Pikachu 40 4 1

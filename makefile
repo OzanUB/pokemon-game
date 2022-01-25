@@ -1,8 +1,8 @@
-CXX = g++
+CXX=g++
 CXXFLAGS = -Wall
 
-proj2: Pokemon.o MyPokemon.o
-	$(CXX) $(CXXFLAGS) Pokemon.o MyPokemon.o proj2.cpp -o proj2
+pokemon-game: Pokemon.o MyPokemon.o
+	$(CXX) $(CXXFLAGS) Pokemon.o MyPokemon.o proj2.cpp -o pokemon-game
 
 MyPokemon.o: MyPokemon.cpp MyPokemon.h
 	$(CXX) $(CXXFLAGS) -c MyPokemon.cpp
@@ -12,7 +12,8 @@ Pokemon.o: Pokemon.cpp Pokemon.h
 
 clean:
 	rm *.o
+	rm pokemon-game
 	rm *~
 
 run:
-	./proj2
+	./pokemon-game
