@@ -1,0 +1,11 @@
+---
+- name: Generate makefile
+  template:
+    src: makefile.yaml.j2
+    dest: "/home/vagrant/{{ project_name }}/src/makefile"
+
+- name: Change permissions
+  ansible.builtin.file:
+    path: "/home/vagrant/{{ project_name }}"
+    mode: '0777'
+    recurse: yes

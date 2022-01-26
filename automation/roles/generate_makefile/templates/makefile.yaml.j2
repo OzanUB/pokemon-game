@@ -1,0 +1,19 @@
+#jinja2: lstrip_blocks: "True", trim_blocks: "True"
+CXX=g++
+CXXFLAGS = -Wall
+
+{{ project_name }}: {{ output_file_two }} {{ output_file_one }}
+	$(CXX) $(CXXFLAGS) {{ output_file_two }} {{ output_file_one }} {{ main_functions }} -o {{ project_name }}
+
+{{ output_file_one }}: {{ helper_functions_one }} {{ main_header }}
+	$(CXX) $(CXXFLAGS) -c {{ helper_functions_one }}
+
+{{ output_file_two }}: {{ helper_functions_two }} {{ sub_header }}
+	$(CXX) $(CXXFLAGS) -c {{ helper_functions_two }}
+
+clean:
+	rm *.o
+	rm {{ project_name }}
+
+run:
+	./{{ project_name }}

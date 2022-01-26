@@ -1,0 +1,11 @@
+---
+# developer variables
+git_project: "https://github.com/OzanUB/pokemon-game.git"
+project_name: "pokemon-game"
+main_functions: "proj2.cpp"
+main_header: "MyPokemon.h"
+sub_header: "Pokemon.h"
+helper_functions_one: "MyPokemon.cpp"
+helper_functions_two: "Pokemon.cpp"
+output_file_one: "MyPokemon.o"
+output_file_two: "Pokemon.o"
